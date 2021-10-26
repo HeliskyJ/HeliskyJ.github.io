@@ -13,7 +13,7 @@ const encontrarCostoMenor = (pesos, procesado) => {
 // función que devuelve el costo minimo y el camino final
 const dijkstra = (grafo, nodoInicial, nodoDestino) => {
   let pesos = {};
-  pesos[nodoDestino] = 'Infinito'
+  pesos[nodoDestino] = 'Infinity'
   pesos = Object.assign(pesos, grafo[nodoInicial]);
   console.log('Inicial `pesos`: ')
   console.log(pesos)
@@ -29,7 +29,7 @@ const dijkstra = (grafo, nodoInicial, nodoDestino) => {
   // nodos visitados
   const nodosVisitados = [];
 
-  // Set initial node. Pick lowest cost node.
+  // Asigna el nodo inical. Toma el peso menor
 
   let nodo = encontrarCostoMenor(pesos, nodosVisitados);
   console.log('Initial `node`: ', nodo)
@@ -76,6 +76,8 @@ const dijkstra = (grafo, nodoInicial, nodoDestino) => {
   };
 
 
+
+// Crea el elemento lista en el DOM
   div =document.getElementById('resultado');
   var ul = document.createElement('ul'), li;
     console.log(resultado)
